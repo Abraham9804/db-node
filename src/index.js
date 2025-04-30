@@ -15,6 +15,12 @@ app.get("/categoria",async function(req, resp){
     resp.json(categorias)
 })
 
+app.get("/productos",async function(req, resp){
+    const [results, metadata] = await sequelize.query("select * from productos")
+    const productos = results
+    resp.json(productos)
+})
+
 //Levantar server
 app.listen(3000,()=>{
     console.log("Servidor iniciado en localhost:3000")
