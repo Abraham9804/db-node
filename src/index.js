@@ -1,5 +1,6 @@
 const express = require("express")
 const sequelize = require("./conexion.js")
+
 //Inicializar la app de express
 const app = express()
 
